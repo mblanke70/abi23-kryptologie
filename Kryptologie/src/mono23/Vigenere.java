@@ -15,22 +15,25 @@ public class Vigenere {
 		return res;
 	}
 	
-	public static String vigenere(String arg, String keyword) {
+	public static String encrypt(String arg, String keyword) {
 		String res = "";
 	
 		for(int i=0; i<arg.length(); i++) {
 			char c = arg.charAt(i);
-			res += shift(c, keyword.charAt( i % keyword.length() ) - 65 );
-			// keyword = BRUTUS
-
-			// c = arg.charAt(i);
-			// res += shift(c, 'B'-65);
-			
-			// c = arg.charAt(i);
-			// res += shift(c, 'R'-65); 
-
-			// c = arg.charAt(i);
-			// res += shift(c, 'U'-65); 
+			int k = keyword.charAt( i % keyword.length() ) - 65;
+			res += shift(c, k);
+		}
+		
+		return res;
+	}
+	
+	public static String decrypt(String arg, String keyword) {
+		String res = "";
+	
+		for(int i=0; i<arg.length(); i++) {
+			char c = arg.charAt(i);
+			int k = keyword.charAt( i % keyword.length() ) - 65;
+			res += shift(c, 26-k);
 		}
 		
 		return res;
@@ -41,11 +44,10 @@ public class Vigenere {
 
 		String cipher1 = caesar(plain, 3);
 		System.out.println( cipher1 );
-		
 		System.out.println( caesar( cipher1, 23 ) );
 		
-		String cipher2 = vigenere(plain, "CODE");
-		System.out.println( cipher2 );		
+		String cipher2 = encrypt(plain, "CODE");
+		System.out.println( cipher2 );	
+		System.out.println( decrypt( cipher2, "CODE" ) );
 	}
-
 }
