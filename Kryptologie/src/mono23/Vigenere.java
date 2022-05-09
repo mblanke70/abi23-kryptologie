@@ -72,7 +72,7 @@ public class Vigenere {
 		
 		//System.out.println( vigenere(cipherA, "LOGISCH", false) );
 		
-		String[] gruppen = split(cipherB, 5);
+		String[] gruppen = partition(cipherB, 5);
 		System.out.println( Arrays.toString(gruppen) );
 		
 		for(int i=0; i<5; i++) {
@@ -99,17 +99,17 @@ public class Vigenere {
 		return f;
 	}
 	
+	/*
 	public static void main(String[] args) {
 		String plain = "LIEBERALT";
 
-		/*
 		String cipher1 = caesar(plain, 3, true);
 		System.out.println( cipher1 );
-		System.out.println( caesar( cipher1, 3, false) );
-		*/
+		System.out.println( caesar( cipher1, 3, false) );		
 		
 		String cipher2 = vigenere(plain, "CODE", true);
 		System.out.println( cipher2 );	
 		System.out.println( vigenere( cipher2, "CODE" , false) );
 	}
+	*/
 }
