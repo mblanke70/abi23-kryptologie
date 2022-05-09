@@ -22,19 +22,6 @@ public class Caesar {
 		return plain;
 	}
 	
-	public static int[] absFreqs(String s) {
-		int[] counter = new int[26];
-		
-		for(int i=0; i<s.length(); i++) {
-			char c = s.charAt(i);
-			if(Character.isLetter(c)) { // c>=65 && c<=90
-				counter[ c-65 ]++;
-			}
-		}
-		
-		return counter;
-	}
-	
 	public static void main(String[] args) {
 		String cipher = encrypt("VENIVIDIVICI",3);
 		System.out.println(cipher);
