@@ -2,6 +2,7 @@ package enigma;
 
 import java.util.HashMap;
 
+
 public class Enigma
 {
 	private static final Rotor[] rotoren = {
