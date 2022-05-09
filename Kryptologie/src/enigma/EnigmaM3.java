@@ -59,11 +59,11 @@ public class EnigmaM3 {
 	public void step()
 	{
 		rotorgruppe[2].step();
-		if(rotorgruppe[2].getPos()==rotorgruppe[2].getÜbertragPos()
-			|| rotorgruppe[1].getPos()+1==rotorgruppe[1].getÜbertragPos())	// Sonderfall: 'double step', hat mechanische Ursachen
+		if(rotorgruppe[2].getPos()==rotorgruppe[2].getUebertragPos()
+			|| rotorgruppe[1].getPos()+1==rotorgruppe[1].getUebertragPos())	// Sonderfall: 'double step', hat mechanische Ursachen
 		{
 			rotorgruppe[1].step();		
-			if(rotorgruppe[1].getPos()==rotorgruppe[1].getÜbertragPos())
+			if(rotorgruppe[1].getPos()==rotorgruppe[1].getUebertragPos())
 				rotorgruppe[0].step();
 		}
 		
@@ -82,7 +82,7 @@ public class EnigmaM3 {
 	}
 	
 	/**
-	 * Liefert den Code für das Zeichen c
+	 * Liefert den Code fï¿½r das Zeichen c
 	 * @param c Das Klartext-Zeichen
 	 * @return Das Geheimtext-Zeichen
 	 */
