@@ -33,12 +33,6 @@ public class Vigenere {
 		return res;
 	}
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e05fb5d... ...
 	public static void main(String[] args) {
 
 		String cipherA = 
@@ -86,10 +80,7 @@ public class Vigenere {
 		}
 	}
 	
-	public static String[] split(String arg, int n) {
-=======
 	public static String[] partition(String arg, int n) {
->>>>>>> parent of d0d3338 (418c89d1735e932f653d6245cabf18713dc13ea2)
 		String[] res = new String[n];
 		for(int i=0; i<n; i++) res[i] = "";
 		
