@@ -4,12 +4,12 @@ public class Rotor
 {
 	private int[][] wiring;  		// wiring[0] : RTL, wiring[1] : LTR
 	private int pos;				// 0..25
-	private int übertragpos;		// 0..25
+	private int uebertragpos;		// 0..25
 	private int ringstellung;		// 0..25
 
 	public Rotor(String w, int t)
 	{
-		übertragpos  = t;
+		uebertragpos  = t;
 		wiring = new int[2][w.length()];
 		
 		for(int i=0; i<w.length(); i++)
@@ -27,6 +27,6 @@ public class Rotor
 	public void step()                 { pos = (pos+1) % 26; }
 	public int  getPos()               { return pos;         }
 	public void setPos(int p)          { pos = p;            }
-	public int  getÜbertragPos()       { return übertragpos; }
+	public int  getUebertragPos()       { return uebertragpos; }
 	public void setRingstellung(int r) { ringstellung = r;   }
 }

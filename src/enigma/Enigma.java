@@ -79,11 +79,11 @@ public class Enigma
 	public void step()
 	{
 		rotorgruppe[2].step();
-		if(rotorgruppe[2].getPos() == rotorgruppe[2].get‹bertragPos())
-			// || rotorgruppe[1].getPos()+1==rotorgruppe[1].get‹bertragPos())	// Sonderfall: 'double step', hat mechanische Ursachen
+		if(rotorgruppe[2].getPos() == rotorgruppe[2].getUebertragPos())
+			// || rotorgruppe[1].getPos()+1==rotorgruppe[1].getÔøΩbertragPos())	// Sonderfall: 'double step', hat mechanische Ursachen
 		{
 			rotorgruppe[1].step();
-			if(rotorgruppe[1].getPos() == rotorgruppe[1].get‹bertragPos())
+			if(rotorgruppe[1].getPos() == rotorgruppe[1].getUebertragPos())
 			{
 				rotorgruppe[0].step();
 			}
