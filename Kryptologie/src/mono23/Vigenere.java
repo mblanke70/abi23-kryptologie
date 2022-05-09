@@ -40,6 +40,9 @@ public class Vigenere {
 	
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e05fb5d... ...
 	public static void main(String[] args) {
 
 		String cipherA = 
